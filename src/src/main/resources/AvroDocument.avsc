@@ -1,0 +1,24 @@
+{"namespace": "se.lth.cs.koshik.model.avro",
+ "type": "record",
+ "name": "AvroDocument",
+ "fields": [
+     {"name": "identifier", "type": "string", "default": ""},
+     {"name": "title",  "type": "string", "default": ""},
+     {"name": "revision", "type": "string", "default": ""},
+     {"name": "language", "type": "string", "default": ""},
+     {"name": "encoding", "type": "string", "default": ""},
+     {"name": "source", "type": "string", "default": ""},
+     {"name": "content", "type": "string", "default": ""},
+     {"name": "attributes", "type":{"type": "map", "values": "string"}},
+     {"name": "annotations", "type":{"type": "array", "items": {
+     	"type": "record",
+ 		"name": "AvroAnnotation",
+ 		"fields": [
+     		{"name": "layer", "type": "string", "default": ""},
+     		{"name": "begin", "type": "int", "default": -1},
+     		{"name": "end", "type": "int", "default": -1},
+     		{"name": "content", "type": "string", "default": ""},
+     		{"name": "features", "type": {"type": "map", "values": "string"}}]
+     }}}
+ ]
+}
