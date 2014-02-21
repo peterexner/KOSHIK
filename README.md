@@ -18,7 +18,7 @@ hadoop jar Koshik-1.0.1.jar se.lth.cs.koshik.util.EnglishPipeline -D mapred.redu
 Querying data through HIVE
 ==========================
 - Importing data into Hive:  
-   CREATE EXTERNAL TABLE koshikdocs ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe' STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat' OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat' LOCATION '/hivetablekoshik' TBLPROPERTIES('avro.schema.url'='hdfs:///AvroDocument.avsc');
+   CREATE EXTERNAL TABLE koshikdocs ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe' STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat' OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat' LOCATION '/hivetablekoshik' TBLPROPERTIES('avro.schema.url'='hdfs:///AvroDocument.avsc');  
    LOAD DATA INPATH '/enwiki_semantic/*.avro' INTO TABLE koshikdocs;
 
 - Number of articles:  
