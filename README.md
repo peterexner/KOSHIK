@@ -17,20 +17,21 @@ hadoop jar Koshik-1.0.1.jar se.lth.cs.koshik.util.EnglishPipeline -D mapred.redu
 
 Querying data through HIVE
 ==========================
-CREATE EXTERNAL TABLE koshikdocs ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe' STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat' OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat' LOCATION '/hivetablekoshik' TBLPROPERTIES('avro.schema.url'='hdfs:///AvroDocument.avsc');
-LOAD DATA INPATH '/enwiki_semantic/*.avro' INTO TABLE koshikdocs;
+- Importing data into Hive:  
+   CREATE EXTERNAL TABLE koshikdocs ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe' STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat' OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat' LOCATION '/hivetablekoshik' TBLPROPERTIES('avro.schema.url'='hdfs:///AvroDocument.avsc');
+   LOAD DATA INPATH '/enwiki_semantic/*.avro' INTO TABLE koshikdocs;
 
-Number of articles:
-select count(identifier) from koshikdocs;
+- Number of articles:  
+   SELECT count(identifier) from koshikdocs;
 
-Number of sentences:
-SELECT count(ann) FROM koshikdocs LATERAL VIEW explode(annotations.layer) annTable as ann WHERE ann LIKE '%Sentence';
+- Number of sentences:  
+   SELECT count(ann) FROM koshikdocs LATERAL VIEW explode(annotations.layer) annTable as ann WHERE ann LIKE '%Sentence';
 
-Number of tokens:
-SELECT count(ann) FROM koshikdocs LATERAL VIEW explode(annotations.layer) annTable as ann WHERE ann LIKE '%Token';
+- Number of tokens:  
+   SELECT count(ann) FROM koshikdocs LATERAL VIEW explode(annotations.layer) annTable as ann WHERE ann LIKE '%Token';
 
-Number of nouns:
-SELECT count(key) FROM (SELECT explode(ann) AS (key,value) FROM (SELECT ann FROM koshikdocs LATERAL VIEW explode(annotations.features) annTable as ann) annmap) decmap WHERE key='POSTAG' AND value LIKE 'NN%';
+- Number of nouns:
+   SELECT count(key) FROM (SELECT explode(ann) AS (key,value) FROM (SELECT ann FROM koshikdocs LATERAL VIEW explode(annotations.features) annTable as ann) annmap) decmap WHERE key='POSTAG' AND value LIKE 'NN%';
 
 NLP Model files
 ==========================
