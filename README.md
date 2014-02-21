@@ -38,3 +38,8 @@ The language model files for the tools used in KOSHIK can be downloaded from the
 https://code.google.com/p/mate-tools/downloads/list
 http://opennlp.sourceforge.net/models-1.5/
 http://nlp.stanford.edu/software/corenlp.shtml
+
+References
+==========
+Please cite the following paper, if you use KOSHIK:
+- Peter Exner, Pierre Nugues, 2014. *KOSHIK: A Large-scale Distributed Computing Framework for NLP*. To appear at ICPRAM 2014, Angers, France.
