@@ -1,7 +1,7 @@
 KOSHIK
 ======
 
-An NLP framework for large scale processing using Hadoop.
+An NLP framework for large scale processing using Hadoop. KOSHIK supports parsing of text in multiple languages including English, Swedish, and Chinese.
 
 USAGE
 =====
