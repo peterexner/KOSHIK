@@ -35,9 +35,9 @@ SELECT count(key) FROM (SELECT explode(ann) AS (key,value) FROM (SELECT ann FROM
 NLP Model files
 ==========================
 The language model files for the tools used in KOSHIK can be downloaded from the following sites:
-https://code.google.com/p/mate-tools/downloads/list
-http://opennlp.sourceforge.net/models-1.5/
-http://nlp.stanford.edu/software/corenlp.shtml
+- https://code.google.com/p/mate-tools/downloads/list
+- http://opennlp.sourceforge.net/models-1.5/
+- http://nlp.stanford.edu/software/corenlp.shtml
 
 References
 ==========
