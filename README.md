@@ -42,4 +42,4 @@ http://nlp.stanford.edu/software/corenlp.shtml
 References
 ==========
 Please cite the following paper, if you use KOSHIK:
-- Peter Exner, Pierre Nugues, 2014. *KOSHIK: A Large-scale Distributed Computing Framework for NLP*. To appear at ICPRAM 2014, Angers, France.
+- Peter Exner, Pierre Nugues, 2014. [*KOSHIK: A Large-scale Distributed Computing Framework for NLP*](http://semantica.cs.lth.se/koshik.pdf). To appear at ICPRAM 2014, Angers, France. [PDF](http://semantica.cs.lth.se/koshik.pdf)
