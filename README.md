@@ -42,4 +42,4 @@ The language model files for the tools used in KOSHIK can be downloaded from the
 References
 ==========
 Please cite the following paper, if you use KOSHIK:
-- Peter Exner, Pierre Nugues, 2014. [*KOSHIK: A Large-scale Distributed Computing Framework for NLP*](http://semantica.cs.lth.se/koshik.pdf). To appear at ICPRAM 2014, Angers, France. [[PDF]](http://semantica.cs.lth.se/koshik.pdf)
+- Peter Exner and Pierre Nugues, 2014. [*KOSHIK: A large-scale distributed computing framework for NLP*](http://semantica.cs.lth.se/koshik.pdf). In Proceedings of ICPRAM 2014 – The 3rd International Conference on Pattern Recognition Applications and Methods, pages 464–470, Angers, March 6-8 2014. [[PDF]](http://semantica.cs.lth.se/koshik.pdf)
